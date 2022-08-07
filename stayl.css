@@ -1,6 +1,6 @@
 body{
     background-image: url(./img/bacgrounds/IMG_6287a-2.jpg);
-    
+    margin: 0%;
     scroll-behavior: smooth;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -190,6 +190,9 @@ div.FQA{
 
 #forum_box{
     background-color:lightgray;
+    width: 60%;
+    height: 95%;
+    margin: auto;
 }
 
 #up_btn {
