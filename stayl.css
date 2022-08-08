@@ -247,15 +247,39 @@ h1.menu{
     max-height: fit-content;
     margin: 0%;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 0;  
+    padding-bottom: 35%; 
 }
-img.mobile_menu_items {
-    width: 100%;
-    height: auto;
-    position: relative;
+div.mobile_menu_items#item1{
+    background-image:url(./img/mobile_menu/item1.jpg); 
+}
+div.mobile_menu_items#item2{
+    background-image:url(./img/mobile_menu/item2\ .jpg); 
+}
+div.mobile_menu_items#item3{
+    background-image:url(./img/mobile_menu/item3\ .jpg); 
+}
+div.mobile_menu_items#item4{
+    background-image:url(./img/mobile_menu/item4.jpg); 
+}
+div.mobile_menu_items#item5{
+    background-image:url(./img/mobile_menu/item5.jpg); 
+}
+div.mobile_menu_items#item6{
+    background-image:url(./img/mobile_menu/item6.jpg); 
+}
+div.mobile_menu_items#item7{
+    background-image:url(./img/mobile_menu/item7.jpg); 
+}
+div.mobile_menu_items#item8{
+    background-image:url(./img/mobile_menu/item8.jpg); 
+}
 
-}
-.mobile_menu_items p{
+p.mobile_menu_items{
     position: absolute;
+    font-size: 24px;
 }
 .FQA{
 
@@ -299,8 +323,7 @@ i.social_media{
 }
 
 
-#up_btn {
-   
+#up_btn { 
     position: fixed;  
     bottom: 20px;  
     right: 30px; 
