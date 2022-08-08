@@ -6,7 +6,39 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover ,contain;
+    font-family: "Poppins", sans-serif;
 }
+.mobile_navbar {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+ 
+.mobile_navbar input[type="checkbox"],
+.mobile_navbar {
+    display: none;
+}
+.mobile_navbar-container {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+}
+
+.menu-items .mobile_navbar li {
+    list-style: none;
+    margin-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+  
+.menu-items .mobile_navbar a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+  
 #home_div{
     width: 100vw;
     height: 100vh;
@@ -19,6 +51,10 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+}
+#wellcom_text{
+    font-size: 3vw;
+    font-family: 'Freestyle Script' ;
 }
 .navbar{
     display: flex;
@@ -39,6 +75,7 @@ body{
 
 }
 .wellcom{
+    text-align: center;
     position: absolute;
     top: 0px;
     width: 25vw;
@@ -46,17 +83,25 @@ body{
     background-color: rgba(0, 0, 0, 0.504);
     color: white;
 }
-
-
-.menu{
-
+#wellcom_title{
+    font-size: 5vw;
 }
+
+
+#FQA_title{
+    width: 100%;
+    margin:auto;
+}
+
+
 div.menu{
     background-color:antiquewhite;
     width: 100vw;
     height: 150vh;
     display: flex;
     flex-direction: column;
+    /* position: absolute; */
+    z-index: 5;
 }
 #menu_title{
     position: absolute;
@@ -160,6 +205,10 @@ h1.menu{
     background-image: url("./img/menu/item8.jpg");
 }
 
+.mobile_menu{
+    display: none;
+    position: relative;
+}
 .menu_items{
     position: relative;
     border: rgba(255, 255, 255, 0) 1px solid;
@@ -169,6 +218,45 @@ h1.menu{
     background-size:cover;
 }
 
+.menu_items_overlay {
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(0, 0, 0, 0.5);
+  }
+  .menu_items_overlay:hover {
+    opacity: 1;
+  }
+  .menu_items_text {
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    width: auto;
+    height: inherit;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+
+  div.mobile_menu_items {
+    width: 100%;
+    max-height: fit-content;
+    margin: 0%;
+    position: relative;
+}
+img.mobile_menu_items {
+    width: 100%;
+    height: auto;
+    position: relative;
+
+}
+.mobile_menu_items p{
+    position: absolute;
+}
 .FQA{
 
 }
@@ -176,6 +264,8 @@ div.FQA{
     background-color:antiquewhite;
     width: 100vw;
     height: 100vh;
+    /* position: absolute; */
+    z-index: 2;
 }
 
 
@@ -185,32 +275,161 @@ div.FQA{
 #Contact_div{
     background-color:antiquewhite;
     width: 100vw;
-    height: 100vh;
+    height: max-content;
+    /* position: absolute; */
+    z-index: 5;
 }
 
 #forum_box{
     background-color:lightgray;
     width: 60%;
-    height: 95%;
+    height: 95vh;
     margin: auto;
 }
+
+#social_media_div{
+    text-align: center;
+    font-size: 25px; 
+}
+
+i.social_media{
+    margin: auto;
+    color: black;
+    size: 50px;
+}
+
 
 #up_btn {
    
     position: fixed;  
     bottom: 20px;  
     right: 30px; 
-    z-index: 1; 
+    z-index: 10; 
    
     border: none;  
-    outline: none;  
-    background-color: red;  
-    color: rgb(4, 0, 0);  
+    outline: white 2px solid;  
+    background-color: rgba(0, 0, 0, 0.073);  
+    color: rgb(255, 255, 255);  
    
-    padding: 15px; 
-    border-radius: 10px;  
-    font-size: 18px; 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  
+    font-size: 25px; 
+    text-align: center;
 }
+.fa-angles-up{
+    padding: 11px;
+}
+
 .window{
-    height: 30vh;
+    height: 40vh;
+}
+
+.back_img{
+    width: 100%;
+    height: auto;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .wellcom{
+        width: 100vw;
+
+    }
+    #wellcom_title{
+        margin-top: 30%;
+        font-size: 9vw;
+        
+    }
+    .navbar{
+        display: none;
+    }
+    div.menu{
+        display: none;
+    }
+    #mobile_menu_cont{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: nowrap;
+    }
+    .mobile_navbar {
+        display:block;
+        position: relative;
+        z-index: 100;
+        opacity: 0.95;
+    }
+    
+    .mobile_navbar-container input[type="checkbox"],
+    .mobile_navbar-container .hamburger-lines {
+    display: block;
+    }
+    
+    .mobile_navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+    }
+
+    .mobile_navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    left: 20px;
+    z-index: 105;
+    opacity: 0;
+    }
+
+    .mobile_navbar-container .hamburger-lines {
+    display: block;
+    height: 23px;
+    width: 35px;
+    position: absolute;
+    top: 17px;
+    left: 20px;
+    z-index: 102;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+
+    .mobile_navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    }
+
+    .mobile_navbar .menu-items {
+    padding-top: 100px;
+    background: #fff;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    }
+
+    .mobile_navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    }
+
+
+    .mobile_navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+    }
+
 }
